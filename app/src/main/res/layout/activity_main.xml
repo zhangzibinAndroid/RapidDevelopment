@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:toggle="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zzb.myalllibrary.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white" />
+
+
+    <com.zzb.zzblibrary.selecttext.SegmentControl
+        android:id="@+id/segment_control"
+        android:layout_width="@dimen/px550"
+        android:layout_height="@dimen/px80"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/px30"
+        android:orientation="horizontal"
+        android:textSize="15sp"
+        app:boundWidth="1dp"
+        app:cornerRadius="5dp"
+        app:horizonGap="5dp"
+        app:normalColor="#FFFFFF"
+        app:selectedColor="#32ADFF"
+        app:separatorWidth="1dp"
+        app:texts="啊啊|啦啦啦|哈哈哈|顶顶顶顶"
+        app:verticalGap="@dimen/px15" />
+
+    <com.zcw.togglebutton.ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="54dp"
+        android:layout_height="30dp"
+        toggle:tbBorderWidth="2px"
+        toggle:tbOffBorderColor="#0ff000"
+        toggle:tbOffColor="#ddd"
+        toggle:tbOnColor="#f00"
+        toggle:tbSpotColor="#ffffff"/>
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:id="@+id/lay_fram"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.zzb.zzblibrary.widget.BounceHorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_jump1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转" />
+
+            <Button
+                android:id="@+id/btn_jump2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转" />
+
+            <Button
+                android:id="@+id/btn_jump3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转" />
+
+            <Button
+                android:id="@+id/btn_jump4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转" />
+
+            <Button
+                android:id="@+id/btn_jump5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转" />
+
+        </LinearLayout>
+    </com.zzb.zzblibrary.widget.BounceHorizontalScrollView>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

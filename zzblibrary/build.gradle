@@ -1,0 +1,70 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'//添加
+
+def configs = rootProject.ext.android
+def librarys = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion configs.compileSdkVersion
+    buildToolsVersion configs.buildToolsVersion
+    defaultConfig {
+        minSdkVersion configs.minSdkVersion
+        targetSdkVersion configs.targetSdkVersion
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    lintOptions { //防止其他一些错误
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    mavenCentral()
+    maven { url 'https://maven.google.com' }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    compile librarys.supportv4
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile librarys.supportv7
+    compile librarys.gson
+    compile librarys.recyclerview
+    compile librarys.design
+    compile librarys.gridlayout
+    compile librarys.cardview
+    compile librarys.okhttp
+    compile librarys.butterknife
+    compile librarys.butterknifecompiler
+    annotationProcessor librarys.butterknifecompiler
+    compile 'com.zhy:autolayout:1.4.5'
+    compile 'com.orhanobut:logger:2.1.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.bumptech.glide:okhttp-integration:1.3.1'
+}
+
+publish {
+    userOrg = 'zhangzibin1992'//bintray网的用户id
+    groupId = 'com.zzb'//自己定义一个唯一的java的包名
+    artifactId = 'zzb'//在bintray上的package名字
+    publishVersion = '1.4.4'//版本号
+    desc = '快速开发框架'//描述，不重要
+    website = 'https://gitee.com/zhangzibin/MyAllLibrary'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+}
+tasks.withType(Javadoc) { //防止doc错误
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
+
+
+
+

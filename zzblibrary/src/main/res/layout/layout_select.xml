@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161c1e"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/picker_actionbar" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px96"
+        android:layout_alignParentBottom="true"
+        android:background="#21282C"
+        android:clickable="true">
+
+        <Button
+            android:id="@+id/preview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:minHeight="@dimen/px02"
+            android:minWidth="@dimen/px02"
+            android:paddingLeft="@dimen/px32"
+            android:paddingRight="@dimen/px32"
+            android:text="@string/preview"
+            android:textColor="@color/default_text_color"
+            android:textSize="@dimen/px30"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/category_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:drawablePadding="@dimen/px10"
+            android:drawableRight="@drawable/text_indicator"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/px28"
+            android:paddingRight="@dimen/px28"
+            android:text="@string/all_dir_name"
+            android:textColor="@color/default_text_color"
+            android:textSize="@dimen/px30" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/top" />
+
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layTitlebar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px90"
+    android:gravity="center_vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/layLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_select"
+        android:gravity="center"
+        android:minWidth="@dimen/px100"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/px10"
+        android:paddingRight="@dimen/px10"
+        android:paddingTop="@dimen/px10">
+
+        <ImageView
+            android:id="@+id/imgLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px30"
+            android:visibility="gone" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:text="标题"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px35" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/lay_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/px20"
+        android:background="@drawable/bg_select"
+        android:minWidth="@dimen/px100">
+
+        <ImageView
+            android:id="@+id/imgRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/px10"
+            android:src="@drawable/ic_add" />
+
+        <TextView
+            android:id="@+id/tvRight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_select"
+            android:gravity="center"
+            android:paddingLeft="@dimen/px10"
+            android:paddingRight="@dimen/px10"
+            android:text="添加试卷"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px30"
+            android:visibility="gone" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

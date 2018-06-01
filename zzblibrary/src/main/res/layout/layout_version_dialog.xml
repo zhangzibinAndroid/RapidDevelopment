@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/px700"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_progress_bg"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="@dimen/px700"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/px20"
+        android:paddingTop="@dimen/px20">
+
+
+        <TextView
+            android:id="@+id/tvVersionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="发现新版本"
+            android:textColor="@color/black"
+            android:textSize="@dimen/px35"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvDescribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/px15"
+            android:minHeight="@dimen/px80"
+            android:text="描述："
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/px32" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px02"
+        android:background="#20000000" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="@dimen/px700"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100"
+            android:layout_weight="1"
+            android:background="@drawable/text_select"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="@dimen/px20"
+            android:text="取消"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="@dimen/px30" />
+
+        <View
+            android:layout_width="@dimen/px02"
+            android:layout_height="match_parent"
+            android:background="#20000000" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100"
+            android:layout_weight="1"
+            android:background="@drawable/text_select"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="@dimen/px20"
+            android:text="确认"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="@dimen/px30" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

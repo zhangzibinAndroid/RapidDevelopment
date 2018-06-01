@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_select"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/px20"
+    android:paddingTop="@dimen/px20">
+
+    <ImageView
+        android:id="@+id/cover"
+        android:layout_width="@dimen/px140"
+        android:layout_height="@dimen/px140"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/px20"
+        android:scaleType="centerCrop" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_toLeftOf="@+id/indicator"
+        android:layout_toRightOf="@+id/cover"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/px28"
+            tools:text="img" />
+
+        <TextView
+            android:id="@+id/path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="#AFAFAF"
+            android:textSize="@dimen/px25"
+            android:visibility="gone"
+            tools:text="/sdcard/a/" />
+
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#AFAFAF"
+            android:textSize="@dimen/px20"
+            tools:text="1张" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <ImageView
+        android:id="@+id/indicator"
+        android:layout_width="@dimen/px36"
+        android:layout_height="@dimen/px36"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/px20"
+        android:layout_marginRight="@dimen/px40"
+        android:src="@drawable/default_check" />
+
+</com.zhy.autolayout.AutoRelativeLayout>

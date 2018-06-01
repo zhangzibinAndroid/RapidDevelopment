@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zzb.myalllibrary.XSpinnerActivity">
+
+    <com.zzb.zzblibrary.widget.spinner.XSpinner
+        android:id="@+id/xSpinner"
+        android:layout_width="@dimen/pt300"
+        android:layout_height="@dimen/pt70"
+        android:layout_centerInParent="true"
+        />
+
+    <Button android:id="@+id/btn_toast"
+        android:layout_width="@dimen/px200"
+        android:layout_height="wrap_content"
+        android:text="toast"/>
+
+</RelativeLayout>

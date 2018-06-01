@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.zzb.zzblibrary.widget.title.TitleScrollView
+        android:id="@+id/scrollTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleNormal"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/baseActivityLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+    </com.zzb.zzblibrary.widget.title.TitleScrollView>
+
+
+    <com.zzb.zzblibrary.widget.title.TitleNestedScrollView
+        android:id="@+id/titleNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleNormal"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/baseActivityLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+    </com.zzb.zzblibrary.widget.title.TitleNestedScrollView>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/baseActivityLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleNormal"
+        android:orientation="vertical" />
+
+
+    <com.zzb.zzblibrary.widget.AutoTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.zzb.zzblibrary.widget.AutoTitleBar
+        android:id="@+id/titleNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/actionsheet_blue"
+        android:visibility="gone" />
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

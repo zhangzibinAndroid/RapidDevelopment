@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zzb.zzblibrary.imageselect.view.ImageSelectViewPager
+        android:id="@+id/vp_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#272828" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px96"
+        android:background="#373c3d"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoFrameLayout
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:foreground="@drawable/btn_back_selector">
+
+            <ImageView
+                android:layout_width="@dimen/px100"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/px20"
+                android:paddingRight="@dimen/px20"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_back" />
+
+        </com.zhy.autolayout.AutoFrameLayout>
+
+        <View
+            android:layout_width="@dimen/px02"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/px24"
+            android:layout_marginTop="@dimen/px24"
+            android:layout_toRightOf="@+id/btn_back"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px20"
+            android:layout_toRightOf="@+id/btn_back"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/px35" />
+
+        <com.zhy.autolayout.AutoFrameLayout
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px32"
+            android:foreground="@drawable/btn_foreground_selector">
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_green_shape"
+                android:gravity="center"
+                android:minWidth="@dimen/px100"
+                android:padding="@dimen/px10"
+                android:text="@string/confirm"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/px28" />
+
+        </com.zhy.autolayout.AutoFrameLayout>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px96"
+        android:layout_alignParentBottom="true"
+        android:background="#373c3d"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/tv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/icon_image_un_select"
+            android:drawablePadding="@dimen/px20"
+            android:gravity="center"
+            android:paddingLeft="@dimen/px24"
+            android:paddingRight="@dimen/px24"
+            android:text="@string/select"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/px35" />
+
+        <View
+            android:layout_width="@dimen/px02"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/px30"
+            android:layout_marginTop="@dimen/px30"
+            android:layout_toLeftOf="@+id/tv_select"
+            android:background="@android:color/black" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoRelativeLayout>

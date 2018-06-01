@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:id="@+id/fl_folder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/folder_bg"
+        android:layout_margin="@dimen/px20"
+        android:paddingRight="@dimen/px06"
+        android:paddingBottom="@dimen/px06">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="@dimen/px160"
+            android:layout_height="@dimen/px160"
+            android:background="@android:color/white"
+            android:scaleType="centerCrop" />
+
+    </com.zhy.autolayout.AutoFrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/px30"
+        android:src="@drawable/icon_image_select" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/px10"
+        android:layout_marginRight="@dimen/px10"
+        android:layout_toLeftOf="@+id/iv_select"
+        android:layout_toRightOf="@+id/fl_folder"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_folder_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/px35" />
+
+        <TextView
+            android:id="@+id/tv_folder_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px06"
+            android:singleLine="true"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/px28" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px02"
+        android:layout_below="@+id/fl_folder"
+        android:layout_marginLeft="@dimen/px20"
+        android:layout_marginRight="@dimen/px20"
+        android:background="@android:color/darker_gray" />
+
+</com.zhy.autolayout.AutoRelativeLayout>

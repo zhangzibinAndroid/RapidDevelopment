@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zzb.myalllibrary.TakePhotoActivity">
+
+
+    <ImageView android:id="@+id/img_head"
+        android:layout_width="@dimen/px200"
+        android:layout_height="@dimen/px200"
+        android:background="@color/colorPrimaryDark"/>
+
+</android.support.constraint.ConstraintLayout>

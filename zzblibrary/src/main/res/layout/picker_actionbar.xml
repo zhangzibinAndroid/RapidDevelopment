@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px96"
+    android:background="#21282C"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/px96"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="@drawable/btn_back_selector"
+        android:padding="@dimen/px28"
+        android:src="@drawable/icon_back" />
+
+    <View
+        android:layout_width="@dimen/px02"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/px24"
+        android:layout_marginTop="@dimen/px24"
+        android:layout_toRightOf="@id/btn_back"
+        android:background="#cc111111" />
+
+    <TextView
+        android:id="@+id/bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/px08"
+        android:layout_toRightOf="@id/btn_back"
+        android:text="@string/select_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px30" />
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/px18"
+        android:background="@drawable/action_btn"
+        android:minHeight="@dimen/px02"
+        android:minWidth="@dimen/px02"
+        android:paddingBottom="@dimen/px10"
+        android:paddingLeft="@dimen/px24"
+        android:paddingRight="@dimen/px24"
+        android:paddingTop="@dimen/px10"
+        android:text="@string/done"
+        android:textColor="@color/default_text_color"
+        android:textSize="@dimen/px25" />
+</com.zhy.autolayout.AutoRelativeLayout>
