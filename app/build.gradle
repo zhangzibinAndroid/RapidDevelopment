@@ -59,8 +59,9 @@ dependencies {
     compile librarys.supportv7
     compile librarys.constraint
     testCompile 'junit:junit:4.12'
-    compile project(':zzblibrary')
+//    compile project(':zzblibrary')
 //    compile librarys.zzb
+    compile librarys.zhangzibin
     compile librarys.butterknife
     compile librarys.butterknifecompiler
     compile librarys.compresspic
